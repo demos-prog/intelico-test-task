@@ -2,14 +2,14 @@ td,
 th {
   border: 1px solid #000;
   padding: 3px 5px;
- white-space: nowrap;
+  white-space: nowrap;
 }
 
-.grey{
+.grey {
   background-color: antiquewhite;
 }
 
-thead{
+thead {
   background-color: rgb(33, 161, 112);
   position: sticky;
   top: 0;
