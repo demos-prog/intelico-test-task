@@ -26,9 +26,13 @@ export default function Table(props) {
         );
 
         setBody(
-          data.map((item) => {
+          data.map((item, index) => {
             let bodyTr = Object.values(item).map((value) => {
-              return <td key={nanoid()}>{value}</td>;
+              return (
+                <td className={index % 2 === 0 ? "grey" : null} key={nanoid()}>
+                  {value}
+                </td>
+              );
             });
             return <tr key={nanoid()}>{bodyTr}</tr>;
           })
