@@ -1,5 +1,4 @@
-.tableWrapper{
-  min-width: 600px;
-  max-width: 100%;
-  overflow: scroll;
+.tableWrapper {
+  position: relative;
+  overflow: auto;
 }
