@@ -14,14 +14,14 @@ th {
 }
 
 thead {
-  position: sticky;
-  top: 0;
   background-color: rgb(33, 161, 112);
-  
 }
 
-.tableWrapper {
+tbody,
+thead {
   overflow: auto;
+}
+.tableWrapper {
   position: relative;
   scroll-snap-type: x mandatory;
 }

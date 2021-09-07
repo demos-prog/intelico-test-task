@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
 import { useEffect, useState } from "react";
+import { ScrollSync, ScrollSyncPane } from "react-scroll-sync";
 import "../App.css";
 
 export default function Table(props) {
@@ -29,7 +30,10 @@ export default function Table(props) {
           data.map((item, index) => {
             let bodyTr = Object.values(item).map((value) => {
               return (
-                <td className={index % 2 === 0 ? "white" : "grey"} key={nanoid()}>
+                <td
+                  className={index % 2 === 0 ? "white" : "grey"}
+                  key={nanoid()}
+                >
                   {value}
                 </td>
               );
@@ -42,13 +46,19 @@ export default function Table(props) {
   }, [props.dataUrl]);
 
   return (
-    <div className="tableWrapper">
-      <table>
-        <thead>
-          <tr>{headers}</tr>
-        </thead>
-        <tbody>{body}</tbody>
-      </table>
-    </div>
+    <ScrollSync>
+      <div className="tableWrapper">
+        <table>
+          <ScrollSyncPane group="horGroup">
+            <thead>
+              <tr>{headers}</tr>
+            </thead>
+          </ScrollSyncPane>
+          <ScrollSyncPane group="horGroup">
+            <tbody>{body}</tbody>
+          </ScrollSyncPane>
+        </table>
+      </div>
+    </ScrollSync>
   );
 }
