@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import { useEffect, useState } from "react";
-import "./table.css";
+import "../App.css";
 
 export default function Table(props) {
   const [headers, setHeaders] = useState(null);
@@ -42,11 +42,13 @@ export default function Table(props) {
   }, [props.dataUrl]);
 
   return (
-    <table>
-      <thead>
-        <tr>{headers}</tr>
-      </thead>
-      <tbody>{body}</tbody>
-    </table>
+    <div className="tableWrapper">
+      <table>
+        <thead>
+          <tr>{headers}</tr>
+        </thead>
+        <tbody>{body}</tbody>
+      </table>
+    </div>
   );
 }

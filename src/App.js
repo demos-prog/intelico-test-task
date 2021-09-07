@@ -16,10 +16,7 @@ function App() {
     >
       <h1>Test text</h1>
       <p>
-        Cupidatat commodo mollit deserunt aliquip Lorem id irure nostrud do. Proident ut officia laborum reprehenderit aliquip et consequat consequat ut mollit. Occaecat anim consequat consectetur fugiat exercitation ullamco aliqua ipsum laborum voluptate cillum ut. Fugiat quis cupidatat velit magna eiusmod laboris labore. Sunt minim est consectetur non nisi pariatur proident sint elit occaecat proident ad et eiusmod.
-        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt,
+        inventore veritatis et quasi architecto beatae vitae dicta sunt,
         explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut
         odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione
         voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum,
@@ -31,9 +28,7 @@ function App() {
         voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
         dolorem eum fugiat, quo voluptas nulla pariatur?
       </p>
-      <div className="tableWrapper">
-        <Table dataUrl={dataUrl} />
-      </div>
+      <Table dataUrl={dataUrl} />
       <h2>Test text</h2>
       <p>
         Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
@@ -50,9 +45,7 @@ function App() {
         voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
         dolorem eum fugiat, quo voluptas nulla pariatur?
       </p>
-      <div className="tableWrapper">
-        <Table dataUrl={dataUrl} />
-      </div>
+      <Table dataUrl={dataUrl} />
     </div>
   );
 }
