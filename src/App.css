@@ -8,14 +8,14 @@ th {
 .grey {
   background-color: antiquewhite;
 }
+.white {
+  background-color: #fff;
+}
 
 thead {
   background-color: rgb(33, 161, 112);
-  position: sticky;
-  top: 0;
 }
 
 .tableWrapper {
-  position: relative;
   overflow: auto;
 }

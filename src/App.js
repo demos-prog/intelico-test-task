@@ -6,7 +6,6 @@ const dataUrl = "https://www.nbrb.by/api/exrates/rates?periodicity=0";
 function App() {
   return (
     <div
-      className="App"
       style={{
         width: "600px",
         margin: "auto",

@@ -29,7 +29,7 @@ export default function Table(props) {
           data.map((item, index) => {
             let bodyTr = Object.values(item).map((value) => {
               return (
-                <td className={index % 2 === 0 ? "grey" : null} key={nanoid()}>
+                <td className={index % 2 === 0 ? "grey" : "white"} key={nanoid()}>
                   {value}
                 </td>
               );
