@@ -18,11 +18,10 @@ export default function Table(props) {
   }
 
   const cellStyle = {
-    minWidth: 200,
-    padding: ".5em 1em",
+    minWidth: 150,
+    padding: ".3em 0.5em",
     textAlign: "left",
-    borderLeft: "1px solid white",
-    borderBottom: "1px solid white",
+    border: "1px solid white",
   };
 
   useEffect(() => {
@@ -68,10 +67,9 @@ export default function Table(props) {
                 position: "sticky",
                 top: 0,
                 display: "block",
-                width: "100%",
                 overflow: "auto",
                 color: "white",
-                background: "black",
+                background: "rgba(210, 10, 30)",
               }}
             >
               <tr>{headers}</tr>
@@ -81,7 +79,6 @@ export default function Table(props) {
             <tbody
               style={{
                 display: "block",
-                width: "100%",
                 overflow: "auto",
               }}
             >

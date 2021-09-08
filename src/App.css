@@ -1,27 +1,10 @@
-/* td,
-th {
-  border: 1px solid #000;
-  padding: 3px 5px;
-  white-space: nowrap;
-  scroll-snap-align: start;
-}
-
-.grey {
-  background-color: antiquewhite;
-}
 .white {
   background-color: #fff;
 }
-
-thead {
-  background-color: rgb(33, 161, 112);
+.grey {
+  background-color: rgba(105, 105, 105, 0.486);
 }
 
-tbody,
-thead {
-  overflow: auto;
+thead::-webkit-scrollbar{
+  height: 0;
 }
-.tableWrapper {
-  position: relative;
-  scroll-snap-type: x mandatory;
-} */
