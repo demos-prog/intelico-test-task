@@ -69,13 +69,13 @@ export default function Table(props) {
                 display: "block",
                 overflow: "auto",
                 color: "white",
-                background: "rgba(210, 10, 30)",
+                background: "rgba(200, 10, 30)",
               }}
             >
               <tr>{headers}</tr>
             </thead>
           </ScrollSyncPane>
-          <ScrollSyncPane group={["horizontal"]}>
+          <ScrollSyncPane group="horizontal">
             <tbody
               style={{
                 display: "block",
