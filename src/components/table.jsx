@@ -17,12 +17,24 @@ export default function Table(props) {
     }
   }
 
+  const cellStyle = {
+    minWidth: 200,
+    padding: ".5em 1em",
+    textAlign: "left",
+    borderLeft: "1px solid white",
+    borderBottom: "1px solid white",
+  };
+
   useEffect(() => {
     getData(props.dataUrl).then((data) => {
       if (data) {
         setHeaders(
           Object.keys(data[0]).map((key) => {
-            return <th key={nanoid()}>{key}</th>;
+            return (
+              <th style={cellStyle} key={nanoid()}>
+                {key}
+              </th>
+            );
           })
         );
 
@@ -32,6 +44,7 @@ export default function Table(props) {
               return (
                 <td
                   className={index % 2 === 0 ? "white" : "grey"}
+                  style={cellStyle}
                   key={nanoid()}
                 >
                   {value}
@@ -43,19 +56,37 @@ export default function Table(props) {
         );
       }
     });
-  }, [props.dataUrl]);
+  }, [props.dataUrl]); // eslint-disable-line
 
   return (
     <ScrollSync>
-      <div className="tableWrapper">
-        <table>
-          <ScrollSyncPane group="horGroup">
-            <thead>
+      <div style={{ display: "flex", position: "relative" }}>
+        <table style={{ width: "100%", display: "block" }}>
+          <ScrollSyncPane group="horizontal">
+            <thead
+              style={{
+                position: "sticky",
+                top: 0,
+                display: "block",
+                width: "100%",
+                overflow: "auto",
+                color: "white",
+                background: "black",
+              }}
+            >
               <tr>{headers}</tr>
             </thead>
           </ScrollSyncPane>
-          <ScrollSyncPane group="horGroup">
-            <tbody>{body}</tbody>
+          <ScrollSyncPane group={["horizontal"]}>
+            <tbody
+              style={{
+                display: "block",
+                width: "100%",
+                overflow: "auto",
+              }}
+            >
+              {body}
+            </tbody>
           </ScrollSyncPane>
         </table>
       </div>
