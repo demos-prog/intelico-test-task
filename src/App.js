@@ -2,6 +2,7 @@ import "./App.css";
 import Table from "./components/table";
 
 const dataUrl = "https://www.nbrb.by/api/exrates/rates?periodicity=0";
+const secUrl = "https://jsonplaceholder.typicode.com/posts"
 
 function App() {
   return (
@@ -44,7 +45,7 @@ function App() {
         voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
         dolorem eum fugiat, quo voluptas nulla pariatur?
       </p>
-      <Table dataUrl={dataUrl} />
+      <Table dataUrl={secUrl} />
     </div>
   );
 }
